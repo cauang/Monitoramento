@@ -1,4 +1,6 @@
 # Configurações do e-mail
+
+
 $remetente = "cauangomes.b@gmail.com"
 $destinatario = "cauangomes.b@gmail.com"
 $smtpServer = "smtp.gmail.com"
@@ -14,6 +16,7 @@ function EnviarEmail($assunto, $mensagem) {
 
 
 # Exportando C# aq para pegar e armazenar a posição do cursor
+
 Add-Type @"
 using System;
 using System.Runtime.InteropServices;
@@ -61,12 +64,12 @@ function TestarLatencia {
 # Variáveis iniciais
 $ultimaPosicao = Get-CursorPos
 $tempoSemMover = 0
-$limiteInatividade = 30 # segundos
+$limiteInatividade = 30 
 $alertaCursorEnviado = $false
 $inativo = $false
 
 $hostPing = "google.com"
-$maxLatencia = 94 # ms
+$maxLatencia = 94 
 $alertaRedeEnviado = $false
 
 while ($true) {
@@ -93,7 +96,8 @@ while ($true) {
         $inativo = $true
     }
 
-    # Verifica latência a cada 60 segundos (no segundo zero do minuto)
+    # Verifica latência a cada 60 segundos 
+
     if ((Get-Date).Second -eq 0) {
         $resultado = TestarLatencia -hostPing $hostPing -maxLatenciaMs $maxLatencia
         $ok = $resultado[0]
