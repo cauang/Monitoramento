@@ -55,10 +55,10 @@ function TestarLatencia {
     $media = ($latencias | Measure-Object -Average).Average
 
     if ($media -gt $maxLatenciaMs) {
-        return @($false, "Latência média alta: $([math]::Round($media,2)) ms para $hostPing.")
+        return @($false, "Latencia média alta: $([math]::Round($media,2)) ms para $hostPing.")
     }
 
-    return @($true, "Latência OK: $([math]::Round($media,2)) ms para $hostPing.")
+    return @($true, "Latencia OK: $([math]::Round($media,2)) ms para $hostPing.")
 }
 
 # Variáveis iniciais
