@@ -64,7 +64,7 @@ function TestarLatencia {
 # Variáveis iniciais
 $ultimaPosicao = Get-CursorPos
 $tempoSemMover = 0
-$limiteInatividade = 30 
+$limiteInatividade = 180 
 $alertaCursorEnviado = $false
 $inativo = $false
 
