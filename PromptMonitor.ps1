@@ -64,12 +64,12 @@ function TestarLatencia {
 # Variáveis iniciais
 $ultimaPosicao = Get-CursorPos
 $tempoSemMover = 0
-$limiteInatividade = 180 
+$limiteInatividade = 1 
 $alertaCursorEnviado = $false
 $inativo = $false
 
 $hostPing = "google.com"
-$maxLatencia = 94 
+$maxLatencia = 60 
 $alertaRedeEnviado = $false
 
 while ($true) {
@@ -91,7 +91,7 @@ while ($true) {
     }
 
     if (-not $alertaCursorEnviado -and $tempoSemMover -ge $limiteInatividade) {
-        EnviarEmail "Alerta: Cursor parado na VM" "O cursor nao se moveu por mais de $limiteInatividade segundos. Pode haver inatividade ou travamento."
+    EnviarEmail "Alerta: Cursor parado na VM" "O cursor nao se moveu por mais de $limiteInatividade segundos.`nPode haver inatividade ou travamento. `nAnydesk : 1 475 456 456 456"
         $alertaCursorEnviado = $true
         $inativo = $true
     }
