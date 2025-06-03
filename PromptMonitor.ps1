@@ -1,6 +1,7 @@
+#Cofiguração Agendador de Tarefas:
+
+
 # Configurações do e-mail
-
-
 $remetente = "cauangomes.b@gmail.com"
 $destinatario = "cauangomes.b@gmail.com"
 $smtpServer = "smtp.gmail.com"
