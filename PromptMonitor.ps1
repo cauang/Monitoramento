@@ -76,6 +76,7 @@ while ($true) {
     Start-Sleep -Seconds 1
 
     # Verificação do cursor pegando an posição e verificando se mantem igual por determinado tempo.
+
     $posAtual = Get-CursorPos
 
     if ($posAtual -eq $ultimaPosicao) {
@@ -91,7 +92,7 @@ while ($true) {
     }
 
     if (-not $alertaCursorEnviado -and $tempoSemMover -ge $limiteInatividade) {
-    EnviarEmail "Alerta: Cursor parado na VM" "O cursor nao se moveu por mais de $limiteInatividade segundos.`nPode haver inatividade ou travamento. `nAnydesk : 1 475 456 456 456"
+    EnviarEmail "Alerta: Cursor parado na VM" "O cursor nao se moveu por mais de $limiteInatividade segundos.`nPode haver inatividade ou travamento. `nAnydesk : 1 242 107 505"
         $alertaCursorEnviado = $true
         $inativo = $true
     }
@@ -106,7 +107,7 @@ while ($true) {
             EnviarEmail "Alerta: Instabilidade na rede" $msg
             $alertaRedeEnviado = $true
         } elseif ($ok -and $alertaRedeEnviado) {
-            EnviarEmail "Rede normalizada" "A latencia da rede voltou ao normal: $msg"
+            EnviarEmail "Rede Retornou" "A latencia da rede voltou ao normal: $msg `nVerificar Robô; Anydesk : 1 242 107 505  "
             $alertaRedeEnviado = $false
         }
     }
