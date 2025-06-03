@@ -64,7 +64,7 @@ function TestarLatencia {
 # Variáveis iniciais
 $ultimaPosicao = Get-CursorPos
 $tempoSemMover = 0
-$limiteInatividade = 1 
+$limiteInatividade = 180 
 $alertaCursorEnviado = $false
 $inativo = $false
 
@@ -75,7 +75,7 @@ $alertaRedeEnviado = $false
 while ($true) {
     Start-Sleep -Seconds 1
 
-    # Verifica cursor
+    # Verificação do cursor pegando an posição e verificando se mantem igual por determinado tempo.
     $posAtual = Get-CursorPos
 
     if ($posAtual -eq $ultimaPosicao) {
@@ -96,7 +96,6 @@ while ($true) {
         $inativo = $true
     }
 
-    # Verifica latência a cada 60 segundos 
 
     if ((Get-Date).Second -eq 0) {
         $resultado = TestarLatencia -hostPing $hostPing -maxLatenciaMs $maxLatencia
