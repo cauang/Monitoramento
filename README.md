@@ -88,14 +88,6 @@ $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
   - ✅ Parar a tarefa se ela for executada por mais de: *(deixe em branco ou defina um tempo alto)*
 
 ---
-
-## 🧪 Teste
-
-- Clique com o botão direito na tarefa criada → **Executar**
-- Verifique a **caixa de entrada do seu e-mail** para confirmar se os alertas estão funcionando.
-
----
-
 ## ✅ Recursos do Script
 
 - Envio de e-mails em texto legível (UTF-8) com alertas de:
