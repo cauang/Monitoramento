@@ -31,6 +31,7 @@ $smtpServer = "smtp.gmail.com"
 $smtpPort = 587
 $senha = ConvertTo-SecureString "sua_senha_de_app" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
+```
 
 ### ⚙️ Configuração do Agendador de Tarefas do Windows
 
@@ -105,6 +106,3 @@ $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
   - A **rede se normaliza** e envia notificação
 
 ---
-
-## 📁 Estrutura sugerida
-
