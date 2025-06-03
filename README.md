@@ -33,14 +33,14 @@ $senha = ConvertTo-SecureString "sua_senha_de_app" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
 ```
 
-### ⚙️ Configuração do Agendador de Tarefas do Windows
+---
+
+### 3 Configuração do Agendador de Tarefas do Windows
 
 #### Como criar a tarefa agendada para execução automática:
 
 1. Abra o **Agendador de Tarefas** (`Win + R` → `taskschd.msc`)
 2. Clique em **Criar Tarefa...** (não use “Criar Tarefa Básica”)
-
----
 
 #### 🗂 Aba Geral
 
@@ -48,15 +48,11 @@ $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
 - Marque: ✅ **Executar com privilégios mais altos**
 - Escolha: **Executar esteja o usuário logado ou não**
 
----
-
 #### 🕒 Aba Disparadores
 
 - Clique em **Novo...**
   - Iniciar a tarefa: `Ao iniciar`
   - *(ou configure para executar diariamente, se preferir)*
-
----
 
 #### ⚙️ Aba Ações
 
@@ -72,13 +68,9 @@ $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
     ```
     > Substitua `"D:\monitor_cursor.ps1"` pelo caminho completo do seu script.
 
----
-
 #### 🔌 Aba Condições
 
 - Desmarque: ❌ **Iniciar a tarefa somente se o computador estiver usando energia elétrica** (se necessário)
-
----
 
 #### 🛠 Aba Configurações
 
