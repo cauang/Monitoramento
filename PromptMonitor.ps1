@@ -71,7 +71,7 @@ $inativo = $false
 $anydesk = "Anydesk: 1 290"
 
 $hostPing = "google.com"
-$maxLatencia = 60 
+$maxLatencia = 200 
 $alertaRedeEnviado = $false
 
 while ($true) {
