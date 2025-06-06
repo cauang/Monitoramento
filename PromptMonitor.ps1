@@ -2,11 +2,11 @@
 
 
 # Configurações do e-mail
-$remetente = "cauangomes.b@gmail.com"
+$remetente = "robomflaw@gmail.com"
 $destinatario = "cauangomes.b@gmail.com"
 $smtpServer = "smtp.gmail.com"
 $smtpPort = 587
-$senha = ConvertTo-SecureString "lgqupvmuahdaykoh" -AsPlainText -Force
+$senha = ConvertTo-SecureString "eafktwtqggsertry" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential($remetente, $senha)
 
 
@@ -65,7 +65,7 @@ function TestarLatencia {
 # Variáveis iniciais
 $ultimaPosicao = Get-CursorPos
 $tempoSemMover = 0
-$limiteInatividade = 180 
+$limiteInatividade = 180
 $alertaCursorEnviado = $false
 $inativo = $false
 
