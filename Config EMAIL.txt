@@ -3,3 +3,6 @@ LAW@MF#2025
 
 Senha de APP:
 eafktwtqggsertry
+
+
+git clone https://github.com/cauang/Monitoramento.git
