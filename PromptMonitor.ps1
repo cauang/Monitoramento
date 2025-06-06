@@ -68,6 +68,7 @@ $tempoSemMover = 0
 $limiteInatividade = 180
 $alertaCursorEnviado = $false
 $inativo = $false
+$anydesk = "Anydesk: 1 290"
 
 $hostPing = "google.com"
 $maxLatencia = 60 
@@ -84,7 +85,7 @@ while ($true) {
         $tempoSemMover++
     } else {
         if ($inativo) {
-            EnviarEmail "Cursor voltou a se mover" "O cursor voltou a se mover apos ficar parado por $tempoSemMover segundos."
+            EnviarEmail "Cursor voltou a se mover" "O cursor voltou a se mover apos ficar parado por $tempoSemMover segundos. `n$anydesk"
             $inativo = $false
         }
         $tempoSemMover = 0
@@ -93,7 +94,7 @@ while ($true) {
     }
 
     if (-not $alertaCursorEnviado -and $tempoSemMover -ge $limiteInatividade) {
-    EnviarEmail "Alerta: Cursor parado na VM" "O cursor nao se moveu por mais de $limiteInatividade segundos.`nPode haver inatividade ou travamento. `nAnydesk : 1 242 107 505"
+    EnviarEmail "Alerta: Cursor parado na VM $anydesk" "O cursor nao se moveu por mais de $limiteInatividade segundos.`nPode haver inatividade ou travamento."
         $alertaCursorEnviado = $true
         $inativo = $true
     }
@@ -108,7 +109,7 @@ while ($true) {
             EnviarEmail "Alerta: Instabilidade na rede" $msg
             $alertaRedeEnviado = $true
         } elseif ($ok -and $alertaRedeEnviado) {
-            EnviarEmail "Rede Retornou" "A latencia da rede voltou ao normal: $msg `nVerificar Robô; Anydesk : 1 242 107 505  "
+            EnviarEmail "Verificar Robô $anydesk" "A latencia da rede voltou ao normal: $msg "
             $alertaRedeEnviado = $false
         }
     }
