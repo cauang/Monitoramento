@@ -3,7 +3,7 @@
 
 # Configurações do e-mail
 $remetente = "robomflaw@gmail.com"
-$destinatario = "cauangomes.b@gmail.com"
+$destinatario = "thiagolima@meirelesefreitas.adv.br"
 $smtpServer = "smtp.gmail.com"
 $smtpPort = 587
 $senha = ConvertTo-SecureString "eafktwtqggsertry" -AsPlainText -Force
